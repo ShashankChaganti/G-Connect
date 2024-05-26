@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Reddit Mono', monospace;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left-box {
+    flex-basis: 20%;
+    background: #66fffc13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.right-box {
+    flex-basis: 80%;
+    padding: 20px;
+    background: #1a1a1a;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    background: #fff;
+    padding: 15px 10px;
+    border-radius: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.search-box img {
+    width: 24px;
+    margin: auto 10px;
+}
+
+.search-box input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 1.2em;
+}
+
+.sections {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+}
+
+.sections li {
+    margin: 10px 0;
+}
+
+.sections a {
+    color: #C6FFAB;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sections a:hover {
+    background: #444;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header .logo a {
+    color: #C6FFAB;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+header small {
+    color: #bbb;
+    font-size: large;
+    font-family: monospace;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+/* Posts Section Styles */
+#posts-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.post {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.post:nth-child(1) {
+    background-color: #333;
+}
+
+.post .post-content {
+    padding-bottom: 20px; /* Add some space below content */
+    border-bottom: 1px solid #444; /* Add a border below content */
+}
+
+.post .post-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post .post-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.post .post-content a {
+    color: #C6FFAB;
+}
+
+.post .post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px; /* Add some space between content and footer */
+}
+
+.post .post-footer button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.post .post-footer button:hover {
+    background-color: #555;
+}
+
+.comment {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #555;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment .comment-content {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.comment .comment-reply {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.posts-header h1 {
+    margin: 0;
+}
+
+.posts-header button {
+    padding: 10px 20px;
+    border: none;
+    background: #C6FFAB;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.posts-header button:hover {
+    background: #a5dd91;
+}
+
+#posts-container {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content button#close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button[type="submit"] {
+    padding: 10px 20px;
+    background: #C6FFAB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+    background: #a5dd91;
+}

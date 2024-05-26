@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>G Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="left-box">
+            <img src="gl.png" class="logo" alt="Logo">
+            <div class="wrapper">
+                <div class="search-box">
+                    <img src="search.png" alt="Search Icon">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <ul class="sections">
+                    <li><a href="biotechnology.html">Biotechnology</a></li>
+                    <li><a href="civil_engineering.html">Civil Engineering</a></li>
+                    <li><a href="computer_science_engineering.html">Computer Science and Engineering</a></li>
+                    <li><a href="electrical_electronics_communications.html">Electrical, Electronics and Communications Engineering</a></li>
+                    <li><a href="mechanical_engineering.html">Mechanical Engineering</a></li>
+                    <li><a href="artificial_intelligence_data_science.html">Artificial Intelligence and Data Science</a></li>
+                    <li><a href="physics.html">Physics</a></li>
+                    <li><a href="life_sciences.html">Life Sciences</a></li>
+                    <li><a href="mathematics.html">Mathematics</a></li>
+
+            </div>
+        </div>
+        <div class="right-box">
+            <div id="wrapper">
+                <header>
+                    <div class="logo">
+                        <a href="/">Gitam Connect</a>
+                    </div>
+                    <small>An Online Interactive Community For Gitamites</small>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Posts</a></li>
+                        <li><a href="#">G-Space</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </header>
+                <main>
+                    <div class="posts-header">
+                        <h1>Posts</h1>
+                        <button id="show-add-post-modal-btn">Add Post</button>
+                    </div>
+                    <div id="posts-container"></div>
+                </main>
+                
+                <div id="add-post-modal" class="modal">
+                    <div class="modal-content">
+                        <button id="close-modal-btn">
+                            <i class="las la-times"></i>
+                        </button>
+                        <form id="add-post-form">
+                            <div class="form-group">
+                                <label for="title">Title</label>
+                                <input type="text" id="title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="content">Content</label>
+                                <textarea id="content" rows="10" required></textarea>
+                            </div>
+                            <button type="submit">Add Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
